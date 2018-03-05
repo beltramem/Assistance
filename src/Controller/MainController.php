@@ -14,6 +14,6 @@ class MainController extends Controller
      */
     public function homeAction()
     {
-        return ["project_name" => "yourProject"];
+        return ["project_name" => "l'Assistance"];
     }
 }

@@ -41,7 +41,7 @@ class __TwigTemplate_db02dee42a1340ae5b90c629c3ecc1ee7b15e3e8fea1224c92445f2fdc2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "    <h1>Welcome to ";
+        echo "    <h1>Bienvenue sur ";
         echo twig_escape_filter($this->env, twig_upper_filter($this->env, (isset($context["project_name"]) || array_key_exists("project_name", $context) ? $context["project_name"] : (function () { throw new Twig_Error_Runtime('Variable "project_name" does not exist.', 3, $this->source); })())), "html", null, true);
         echo ".</h1>
 ";
@@ -69,7 +69,7 @@ class __TwigTemplate_db02dee42a1340ae5b90c629c3ecc1ee7b15e3e8fea1224c92445f2fdc2
     {
         return new Twig_Source("{% extends \"base.html.twig\" %}
 {% block body %}
-    <h1>Welcome to {{ project_name|upper }}.</h1>
+    <h1>Bienvenue sur {{ project_name|upper }}.</h1>
 {% endblock %}", "main/home.html.twig", "/home/students/student5/Assistance/templates/main/home.html.twig");
     }
 }
