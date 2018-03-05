@@ -1,0 +1,16 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# the "app_hello_world" route name is not important yet
+app_hello_world:
+    path: /hello/world
+    controller: App\Controller\HelloWorldController::hello
+
+app_product:
+    path: /product
+    controller: App\Controller\ProductController::acc
+   
+app_product_add:
+    path: /product/add
+    controller: App\Controller\ProductController::add
