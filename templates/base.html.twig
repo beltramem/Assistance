@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Assistance info J&amp;S{% endblock %}</title>
+        {% block stylesheets %}<link href="{{ asset('css/style.css') }}">{% endblock %}
     </head>
     <body>
-		{% block header %}{% endblock %}
+		{% block header %}<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Logo" height="42" width="42"><h1>Jone &amp; Smith</h1>{% endblock %}
         {% block body %}{% endblock %}
 		<footer>
             <hr/>
@@ -15,3 +15,4 @@
         {% block javascripts %}{% endblock %}
     </body>
 </html>
+
