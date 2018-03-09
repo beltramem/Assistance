@@ -1,0 +1,24 @@
+.container_menu{
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.home_btn{
+	border:1px solid #000;
+	padding:5px;
+	background:#98949452;
+	text-decoration: none;
+	color: black ;
+    width: 12%;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+
+}
+
+.home_btn:hover{
+	background:black;
+	color: white;
+}

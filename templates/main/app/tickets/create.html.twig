@@ -3,4 +3,18 @@
 
     <h2>Déposer un ticket</h2>
 
+    {{ form_start(form) }}
+    <div>
+   		{{ form_label(form.importance) }}
+   		{{ form_errors(form.importance) }}
+   		{{ form_widget(form.importance) }}
+	</div>
+	<div>
+    	{{ form_widget(form.save) }}
+	</div>
+	{{ form_end(form) }}
+	<div>
+	{{ dump(result) }}
+	</div>
+
 {% endblock %}
