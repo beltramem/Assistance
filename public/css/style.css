@@ -29,6 +29,7 @@ figure{
 }
 
 footer{
+	background-color: grey;
 	bottom: 0;
     position: absolute;
     width: 100%;
@@ -46,4 +47,12 @@ html,body{
 	display:flex;
 	justify-content:  space-between;
 
+}
+
+hr{
+	margin:0;
+}
+
+header{
+	background-color: grey;
 }
