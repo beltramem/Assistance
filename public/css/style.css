@@ -22,7 +22,12 @@ figure{
 }
 
 footer{
-	text-align: center;
-	position: absolute;
-	bottom: 10%;
+	bottom: 0;
+    position: absolute;
+    width: 100%;
 }
+
+body
+{
+	margin:0;
+	}
