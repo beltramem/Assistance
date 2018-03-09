@@ -10,7 +10,7 @@ class MainController extends Controller
 { 
     /**
      * @Route("/", name="app_home")
-     * @Template("main/home.html.twig")
+     * @Template("main/app/home.html.twig")
      */
     public function homeAction()
     {

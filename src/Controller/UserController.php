@@ -10,11 +10,11 @@ class UserController extends Controller
 {
 
 	/**
- 	* @Route("/", name="home_user_auth")
+ 	* @Route("/connecte", name="home_user_auth")
  	*/   
     public function homeUser()
     {
-    	return $this->render("main/app/home.html.twig", ["project_name" => "MaxwellCornul"]);
+    	return $this->render("main/app/home.html.twig", ["userAuth" => "Utilisateur"]);
     }
 
 }
