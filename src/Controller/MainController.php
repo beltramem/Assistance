@@ -9,11 +9,11 @@ use Symfony\Component\Routing\Annotation\Route; //add this line to add usage of 
 class MainController extends Controller
 { 
     /**
-     * @Route("/", name="app_home")
-     * @Template("main/app/home.html.twig")
+     * @Route("/", name="auth")
+     * @Template("main/auth.html.twig")
      */
     public function homeAction()
     {
-        return ["project_name" => "l'Assistance"];
+        
     }
 }
