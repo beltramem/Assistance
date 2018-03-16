@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use App\Entity\Product;
 
@@ -30,10 +31,25 @@ class TicketsController extends Controller
      //         'value' => array('Logiciel','Matériel')))
 
    		->add("importance", ChoiceType::class, array(
+			'label' => 'Importance :',
    			'choices' => array('très important' => 'Timportant', 
    							   'important' => 'important',
    							   'peu important' => 'Pimportant')))
-
+		->add("intitutle", TextType::class, array(
+		   'label' => 'Intitulé :',
+           'attr' => array('size' => '50px')
+          ))
+		
+		->add("batiment", ChoiceType::class,array(
+		'label' => 'Batiment :'))
+		->add("salle", ChoiceType::class, array(
+		'label' => 'Salle :'))
+		->add("poste", ChoiceType::class, array(
+		'label' => 'Poste :'))
+		
+		->add("description", TextareaType::class, array(
+		'label' => 'Description :',
+		'attr' => array('Size'=>'400px')))
    		->add("save", SubmitType::class, ["label" => "Envoyer"])
 
    		->getForm();

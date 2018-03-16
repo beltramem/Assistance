@@ -5,6 +5,27 @@
 
     {{ form_start(form) }}
     <div>
+   		{{ form_label(form.batiment) }}
+   		{{ form_errors(form.batiment) }}
+   		{{ form_widget(form.batiment) }}
+		{{ form_label(form.salle) }}
+   		{{ form_errors(form.salle) }}
+   		{{ form_widget(form.salle) }}
+		{{ form_label(form.poste) }}
+   		{{ form_errors(form.poste) }}
+   		{{ form_widget(form.poste) }}
+	</div>
+	<div>
+		{{ form_label(form.intitutle) }}
+   		{{ form_errors(form.intitutle) }}
+   		{{ form_widget(form.intitutle) }}
+	</div>	
+	<div>
+		{{ form_label(form.description) }}
+   		{{ form_errors(form.description) }}
+   		{{ form_widget(form.description) }}
+	</div>
+    <div>
    		{{ form_label(form.importance) }}
    		{{ form_errors(form.importance) }}
    		{{ form_widget(form.importance) }}
