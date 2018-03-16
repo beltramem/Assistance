@@ -3,7 +3,8 @@
 
     <h2>Menu assistance {{ userAuth }}</h2>
 
-
+    <div class="container_menu">
+    
     <a type="button" class="home_btn" href="{{url("create_ticket")}}" >Déposer un ticket</a>
 
     <a type="button" class="home_btn" href="{{url("view_ticket")}}" >Consulter ticket(s)</a>
@@ -11,5 +12,7 @@
     <a type="button" class="home_btn" href="{{url("notification")}}" >Notification</a>
 
     <a type="button" class="home_btn" href="{{url("auth")}}" >Se déconnecter</a>
+
+    </div>
 
 {% endblock %}
