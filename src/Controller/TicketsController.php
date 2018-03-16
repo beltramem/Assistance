@@ -31,23 +31,29 @@ class TicketsController extends Controller
      //         'value' => array('Logiciel','Matériel')))
 
    		->add("importance", ChoiceType::class, array(
+			'required'   => true,
 			'label' => 'Importance :',
    			'choices' => array('très important' => 'Timportant', 
    							   'important' => 'important',
    							   'peu important' => 'Pimportant')))
 		->add("intitutle", TextType::class, array(
+			'required'   => true,
 		   'label' => 'Intitulé :',
            'attr' => array('size' => '50px')
           ))
 		
 		->add("batiment", ChoiceType::class,array(
+		'required'   => true,
 		'label' => 'Batiment :'))
 		->add("salle", ChoiceType::class, array(
+		'required'   => true,
 		'label' => 'Salle :'))
 		->add("poste", ChoiceType::class, array(
+		'required'   => true,
 		'label' => 'Poste :'))
 		
 		->add("description", TextareaType::class, array(
+		'required'   => true,
 		'label' => 'Description :',
 		'attr' => array('Size'=>'400px')))
    		->add("save", SubmitType::class, ["label" => "Envoyer"])
