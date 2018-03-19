@@ -670,7 +670,7 @@
         },
         {
             "name": "symfony/asset",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset.git",
@@ -726,7 +726,7 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
@@ -795,7 +795,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -857,7 +857,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -1115,7 +1115,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -1164,16 +1164,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "552e244df10237f845a94fd64b194f848805e34b"
+                "reference": "44a796d2ecc2a16a5fc8f2956a34ee617934d55f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/552e244df10237f845a94fd64b194f848805e34b",
-                "reference": "552e244df10237f845a94fd64b194f848805e34b",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/44a796d2ecc2a16a5fc8f2956a34ee617934d55f",
+                "reference": "44a796d2ecc2a16a5fc8f2956a34ee617934d55f",
                 "shasum": ""
             },
             "require": {
@@ -1209,20 +1209,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-11T17:17:44+00:00"
+            "time": "2018-03-05T18:28:26+00:00"
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.70",
+            "version": "v1.0.71",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "1f00c05d35523dc0ac52e4a457989a069be5a7a4"
+                "reference": "51d7ddce85ca8b73a1fc16771f607b7d56692dbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/1f00c05d35523dc0ac52e4a457989a069be5a7a4",
-                "reference": "1f00c05d35523dc0ac52e4a457989a069be5a7a4",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/51d7ddce85ca8b73a1fc16771f607b7d56692dbd",
+                "reference": "51d7ddce85ca8b73a1fc16771f607b7d56692dbd",
                 "shasum": ""
             },
             "require": {
@@ -1255,7 +1255,7 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
-            "time": "2018-02-22T07:00:47+00:00"
+            "time": "2018-03-10T21:15:53+00:00"
         },
         {
             "name": "symfony/form",
@@ -1339,16 +1339,16 @@
         },
         {
             "name": "symfony/framework-bundle",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "1221c54863061e71573b07882b4c53795fbfc229"
+                "reference": "d47d6da8c852648e26f12e55e4c895b81c4e99bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/1221c54863061e71573b07882b4c53795fbfc229",
-                "reference": "1221c54863061e71573b07882b4c53795fbfc229",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/d47d6da8c852648e26f12e55e4c895b81c4e99bf",
+                "reference": "d47d6da8c852648e26f12e55e4c895b81c4e99bf",
                 "shasum": ""
             },
             "require": {
@@ -1449,7 +1449,7 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-02-28T21:50:02+00:00"
+            "time": "2018-03-02T08:28:17+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -2054,7 +2054,7 @@
         },
         {
             "name": "symfony/routing",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
@@ -2289,7 +2289,7 @@
         },
         {
             "name": "symfony/twig-bridge",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bridge.git",
@@ -2452,7 +2452,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -2578,7 +2578,7 @@
     "packages-dev": [
         {
             "name": "symfony/dotenv",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
@@ -2635,7 +2635,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -2684,7 +2684,7 @@
         },
         {
             "name": "symfony/web-server-bundle",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-server-bundle.git",
