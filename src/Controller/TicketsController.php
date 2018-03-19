@@ -14,7 +14,9 @@ use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use App\Entity\Product;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use App\Entity\Ticket;
 
 class TicketsController extends Controller
 {
@@ -43,17 +45,17 @@ class TicketsController extends Controller
           ))
 		
 		->add("batiment", ChoiceType::class,array(
-		'required'   => true,
+		'required'=> true,
 		'label' => 'Batiment :'))
 		->add("salle", ChoiceType::class, array(
-		'required'   => true,
+		'required'=> true,
 		'label' => 'Salle :'))
 		->add("poste", ChoiceType::class, array(
-		'required'   => true,
+		'required'=> true,
 		'label' => 'Poste :'))
 		
 		->add("description", TextareaType::class, array(
-		'required'   => true,
+		'required'=> true,
 		'label' => 'Description :',
 		'attr' => array('Size'=>'400px')))
    		->add("save", SubmitType::class, ["label" => "Envoyer"])
@@ -75,10 +77,12 @@ class TicketsController extends Controller
  	* @Route("/userConnecte/viewTicket", name="view_ticket")
  	* @Template("main/app/tickets/view.html.twig")
  	*/   
-    public function view()
-    {
-    	
-    }
+	public function view()
+	{
+		$em = $this->getDoctrine()->getManager();
+        $tickets = $em->getRepository(Product::class)->findAll();
+        return ["tickets" => $tickets];
+	}	
 
 
 

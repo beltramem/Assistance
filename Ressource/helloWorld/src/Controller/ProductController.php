@@ -1,4 +1,4 @@
-<?php
+ <?php
 namespace App\Controller;
 use App\Entity\Product;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

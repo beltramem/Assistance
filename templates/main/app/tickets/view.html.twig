@@ -2,5 +2,25 @@
 {% block body %}
 
     <h2>Vos tickets</h2>
+	<table class="table">
+        <tr>
+            <th>Intitule</th>
+            <th>Date</th>
+            <th>poste</th>
+            <th>Action</th>
+        </tr>
+        {% for ticket in tickets %}
+            <tr>
+                <td>{{ ticket.intitule }}</td>
+                <td>{{ ticket.intitule }}</td>
+                <td>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">No content available</td>
+            </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}
