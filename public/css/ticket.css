@@ -1,0 +1,19 @@
+.batiment, .intitule,.description, .importance, .save{
+	padding: 1%;
+}
+
+#form_description{
+	width: 50%;
+	height: 2%;
+}
+
+.batiment{
+	width: 33%;
+	display: flex;
+	justify-content: space-between;
+}
+
+form{
+	margin:auto;
+	width: 80%;
+}
