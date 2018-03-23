@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\TicketRepository")
  */
 class Ticket
 {
@@ -33,19 +33,15 @@ class Ticket
 	private $description;
 	
 	 /**
-	 * @ORM\Column(type="text", length=255)
+	 * @ORM\Column(type="text", length=255, nullable=true)
 	 */
 	private $chemin_doc;
 	
 	/**
-	 * @ORM\Column(type="datetime")
+	 * @ORM\Column(type="datetime", nullable=true)
 	 */
 	private $date_de_resolution;
 	
-	/**
-	 * @ORM\Column(type="text", length=255)
-	 */
-	private $commentaire;
 	
 	/* @ORM\Column(type="integer")
     */
@@ -89,7 +85,7 @@ class Ticket
 	
   public function setIntitule($pIntitule)
   {
-    $this->intitule=$pintitule;
+    $this->intitule=$pIntitule;
   }	
   public function setDate_de_creation($pDate_de_creation)
   {

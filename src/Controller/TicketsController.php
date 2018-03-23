@@ -15,6 +15,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Ticket;
+use DateTime;
 
 class TicketsController extends Controller
 {
@@ -26,32 +27,28 @@ class TicketsController extends Controller
     public function create(Request $request)
     {
 		$ticket = new Ticket();
-    	$form = $this->createFormBuilder()
-
-   		// ->add("nature", RadioType::class ,array(
-     //         'value' => array('Logiciel','Matériel')))
-
-   		->add("importance", ChoiceType::class, array(
+    	$form = $this->createFormBuilder($ticket)
+   		/*->add("importance", ChoiceType::class, array(
 			'required'   => true,
 			'label' => 'Importance :',
    			'choices' => array('très important' => 'Timportant', 
    							   'important' => 'important',
-   							   'peu important' => 'Pimportant')))
-		->add("intitutle", TextType::class, array(
+   							   'peu important' => 'Pimportant')))*/
+		->add("intitule", TextType::class, array(
 			'required'   => true,
 		   'label' => 'Intitulé :',
            'attr' => array('size' => '50px')
           ))
 		
-		->add("batiment", ChoiceType::class,array(
+		/*->add("batiment", ChoiceType::class,array(
 		'required'=> true,
 		'label' => 'Batiment :'))
 		->add("salle", ChoiceType::class, array(
 		'required'=> true,
-		'label' => 'Salle :'))
-		->add("poste", ChoiceType::class, array(
+		'label' => 'Salle :'))*/
+		/*->add("poste", ChoiceType::class, array(
 		'required'=> true,
-		'label' => 'Poste :'))
+		'label' => 'Poste :'))*/
 		
 		->add("description", TextareaType::class, array(
 		'required'=> true,
@@ -61,10 +58,13 @@ class TicketsController extends Controller
 
    		->getForm();
     
-    	$result = [];
+    	$result=[];
 		$form->handleRequest($request);
 		if ( $form->isSubmitted() && $form->isValid()) {
-		    $result = $form->getData();
+			$ticket->setDate_De_Creation(new DateTime());
+			$em = $this->getDoctrine()->getManager();
+			$em->persist($ticket);
+			$em->flush();
 		}
 		
 		return ["ticket" => $ticket,"form" => $form->createView(), "result" => $result];

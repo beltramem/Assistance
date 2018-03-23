@@ -5,20 +5,12 @@
 
     {{ form_start(form) }}
     <div class="batiment">
-   		{{ form_label(form.batiment) }}
-   		{{ form_errors(form.batiment) }}
-   		{{ form_widget(form.batiment) }}
-		{{ form_label(form.salle) }}
-   		{{ form_errors(form.salle) }}
-   		{{ form_widget(form.salle) }}
-		{{ form_label(form.poste) }}
-   		{{ form_errors(form.poste) }}
-   		{{ form_widget(form.poste) }}
+   		{#{{ form_label(form.batiment) }}{{ form_errors(form.batiment) }}{{ form_widget(form.batiment) }}{{ form_label(form.salle) }}{{ form_errors(form.salle) }}{{ form_widget(form.salle) }}{{ form_label(form.poste) }}{{ form_errors(form.poste) }}{{ form_widget(form.poste) }}#}
 	</div>
 	<div class="intitule">
-		{{ form_label(form.intitutle) }}
-   		{{ form_errors(form.intitutle) }}
-   		{{ form_widget(form.intitutle) }}
+		{{ form_label(form.intitule) }}
+   		{{ form_errors(form.intitule) }}
+   		{{ form_widget(form.intitule) }}
 	</div>	
 	<div class="description">
 		{{ form_label(form.description) }}
@@ -26,9 +18,7 @@
    		{{ form_widget(form.description) }}
 	</div>
     <div class="importance">
-   		{{ form_label(form.importance) }}
-   		{{ form_errors(form.importance) }}
-   		{{ form_widget(form.importance) }}
+   		{#{{ form_label(form.importance) }}{{ form_errors(form.importance) }}{{ form_widget(form.importance) }}#}
 	</div>
 	<div class="save">
     	{{ form_widget(form.save) }}
