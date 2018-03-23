@@ -14,7 +14,6 @@ class Urgence
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-
     private $id_urgence;
 
     /**

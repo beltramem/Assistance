@@ -15,9 +15,13 @@ class Ticket
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+	private $id_ticket;
 
+	 /**
+	 * @ORM\Column(type="text", length=255)
+	 */
 	private $intitule;
-
+	
 	/**
 	 * @ORM\Column(type="datetime")
 	 */
@@ -49,9 +53,9 @@ class Ticket
 	
 	
 	
-	public function getId()
+	public function getId_ticket()
   {
-    return $this->id;
+    return $this->id_ticket;
   }	
 	public function getIntitule()
   {

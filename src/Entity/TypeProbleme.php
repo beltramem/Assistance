@@ -14,11 +14,6 @@ class TypeProbleme
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
     private $id_type;
 
     /**
