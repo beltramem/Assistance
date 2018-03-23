@@ -5,10 +5,16 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repoitory\CommentaireRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CommentaireRepository")
  */
 class Commentaire
 {
+	 /**
+     * @ManyToOne(targetEntity="Ticket", inversedBy="commentaire")
+     * @JoinColumn(name="ticket_id", referencedColumnName="ticket_id")
+     */
+	
+	
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -18,7 +24,7 @@ class Commentaire
     private $id_commentaire;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $contenu_com;
 

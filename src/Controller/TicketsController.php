@@ -11,11 +11,16 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Ticket;
+use App\Entity\Urgence;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 use DateTime;
+
 
 class TicketsController extends Controller
 {
@@ -28,12 +33,12 @@ class TicketsController extends Controller
     {
 		$ticket = new Ticket();
     	$form = $this->createFormBuilder($ticket)
-   		/*->add("importance", ChoiceType::class, array(
+   		->add("urgence", EntityType::class, array(
 			'required'   => true,
-			'label' => 'Importance :',
-   			'choices' => array('très important' => 'Timportant', 
-   							   'important' => 'important',
-   							   'peu important' => 'Pimportant')))*/
+			'label' => 'Urgence :',
+   			'class' => Urgence::class,
+			'choice_label' => 'libelle_urgence'
+			))
 		->add("intitule", TextType::class, array(
 			'required'   => true,
 		   'label' => 'Intitulé :',

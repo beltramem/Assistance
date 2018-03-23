@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use App\Entity\Urgence;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TicketRepository")
@@ -10,6 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Ticket
 {
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Urgence", inversedBy="tickets")
+	 * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
+     */
+	 private $urgence;
+	 
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -43,7 +51,7 @@ class Ticket
 	private $date_de_resolution;
 	
 	
-	/* @ORM\Column(type="intege")
+	/* @ORM\Column(type="integer")
     */
 	private $nb_redirection;
 	
@@ -81,6 +89,10 @@ class Ticket
 	{
 		return $this->nb_redirection;
 	}
+	public function getUrgence()
+	{
+		return $this->urgence;
+	}
 	
 	
   public function setIntitule($pIntitule)
@@ -111,4 +123,9 @@ class Ticket
   {
 	  $this->nb_redirection=$pNb_redirection;
   }
+   public function setUrgence($pUrgence)
+  {
+	  $this->urgence=$pUrgence;
+  }
+  
 }

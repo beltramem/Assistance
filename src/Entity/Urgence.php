@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UrgenceRepository")
@@ -26,7 +27,7 @@ class Urgence
         return $this->id;
     }
 
-    public function getIdUrgence(): ?int
+    public function getIdUrgence(): int
     {
         return $this->id_urgence;
     }
@@ -38,12 +39,12 @@ class Urgence
         return $this;
     }
 
-    public function getLibelleUrgence(): ?string
+    public function getLibelleUrgence(): string
     {
         return $this->libelle_urgence;
     }
 
-    public function setLibelleUrgence(?string $libelle_urgence): self
+    public function setLibelleUrgence(string $libelle_urgence): self
     {
         $this->libelle_urgence = $libelle_urgence;
 
