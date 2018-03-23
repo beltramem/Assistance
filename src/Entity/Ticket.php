@@ -111,5 +111,4 @@ class Ticket
   {
 	  $this->nb_redirection=$pNb_redirection;
   }
-  
 }
