@@ -25,6 +25,7 @@ class TicketsController extends Controller
  	*/   
     public function create(Request $request)
     {
+		$ticket = new Ticket();
     	$form = $this->createFormBuilder()
 
    		// ->add("nature", RadioType::class ,array(
@@ -66,7 +67,7 @@ class TicketsController extends Controller
 		    $result = $form->getData();
 		}
 		
-		return ["form" => $form->createView(), "result" => $result];
+		return ["ticket" => $ticket,"form" => $form->createView(), "result" => $result];
     	
     }
 
@@ -78,8 +79,8 @@ class TicketsController extends Controller
 	public function view()
 	{
 		$em = $this->getDoctrine()->getManager();
-        $tickets = $em->getRepository(Product::class)->findAll();
-        return ["tickets" => $tickets];
+        $tickets = $em->getRepository(Ticket::class)->findAll();
+        return ["ticket" => $tickets];
 	}	
 
 
