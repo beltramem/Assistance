@@ -43,7 +43,7 @@ class Ticket
 	private $date_de_resolution;
 	
 	
-	/* @ORM\Column(type="integer")
+	/* @ORM\Column(type="intege")
     */
 	private $nb_redirection;
 	
