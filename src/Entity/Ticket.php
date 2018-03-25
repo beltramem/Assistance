@@ -17,7 +17,15 @@ class Ticket
 	 * @ORM\JoinColumn(name="id_urgence", referencedColumnName="id_urgence")
      */
 	 private $urgence;
+
+	 /**
+     * @ORM\ManyToOne(targetEntity="Probleme", inversedBy="tickets")
+	 * @ORM\JoinColumn(name="id_prob", referencedColumnName="id_prob")
+     */
+	 private $probleme;
 	 
+	 
+	
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -94,6 +102,10 @@ class Ticket
 	{
 		return $this->urgence;
 	}
+	public function getProbleme()
+	{
+		return $this->probleme;
+	}
 	
 	
   public function setIntitule($pIntitule)
@@ -127,6 +139,10 @@ class Ticket
    public function setUrgence($pUrgence)
   {
 	  $this->urgence=$pUrgence;
+  }
+  public function setProbleme($pProbleme)
+  {
+	  $this->urgence=$pProbleme	;
   }
   
    /**

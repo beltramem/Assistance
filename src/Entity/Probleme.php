@@ -22,10 +22,6 @@ class Probleme
      */
     private $libelle_prob;
 
-    public function getId()
-    {
-        return $this->id;
-    }
 
     public function getIdProb()
     {
