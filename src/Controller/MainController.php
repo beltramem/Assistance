@@ -14,6 +14,15 @@ class MainController extends Controller
      */
     public function homeAction()
     {
-        
+
     }
+	
+	/**
+     * @Route("/admin")
+     */
+	
+	public function admin()
+	{
+		return new Response('<html><body>Admin page!</body></html>');
+	}
 }

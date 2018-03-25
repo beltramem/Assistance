@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UtilisateurRepository")
  */
-class Utilisateur
+class Utilisateur implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
@@ -19,7 +21,7 @@ class Utilisateur
     /**
      * @ORM\Column(type="string", length=30)
      */
-    private $identifiant;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=30)
@@ -36,12 +38,13 @@ class Utilisateur
      */
     private $prenom;
 
+
     public function getId()
     {
         return $this->id;
     }
 
-    public function getIdUser(): ?int
+    public function getIdUser(): int
     {
         return $this->id_user;
     }
@@ -53,19 +56,19 @@ class Utilisateur
         return $this;
     }
 
-    public function getIdentifiant(): ?string
+    public function getUsername()
     {
-        return $this->identifiant;
+        return $this->username;
     }
 
-    public function setIdentifiant(string $identifiant): self
+    public function setUsername(string $username): self
     {
-        $this->identifiant = $identifiant;
+        $this->username = $username;
 
         return $this;
     }
 
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return $this->password;
     }
@@ -77,27 +80,67 @@ class Utilisateur
         return $this;
     }
 
-    public function getNom(): ?string
+    public function getNom(): string
     {
         return $this->nom;
     }
 
-    public function setNom(?string $nom): self
+    public function setNom(string $nom): self
     {
         $this->nom = $nom;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
+    public function getPrenom(): string
     {
         return $this->prenom;
     }
 
-    public function setPrenom(?string $prenom): self
+    public function setPrenom(string $prenom): self
     {
         $this->prenom = $prenom;
 
         return $this;
+    }
+	
+	public function getSalt()
+    {
+        // you *may* need a real salt depending on your encoder
+        // see section on salt below
+        return null;
+    }
+	
+	public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+	
+	/** @see \Serializable::serialize() */
+	public function serialize()
+    {
+        return serialize(array(
+            $this->id_user,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+	
+	/** @see \Serializable::unserialize() */
+	public function unserialize($serialized)
+    {
+        list (
+            $this->id_user,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+        ) = unserialize($serialized);
+    }
+
+	public function eraseCredentials()
+    {
     }
 }
