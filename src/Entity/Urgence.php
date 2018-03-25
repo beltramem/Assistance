@@ -32,7 +32,7 @@ class Urgence
         return $this->id_urgence;
     }
 
-    public function setIdUrgence(int $id_urgence): self
+    public function setIdUrgence(int $id_urgence)
     {
         $this->id_urgence = $id_urgence;
 
@@ -44,7 +44,7 @@ class Urgence
         return $this->libelle_urgence;
     }
 
-    public function setLibelleUrgence(string $libelle_urgence): self
+    public function setLibelleUrgence(string $libelle_urgence)
     {
         $this->libelle_urgence = $libelle_urgence;
 

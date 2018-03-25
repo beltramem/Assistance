@@ -54,6 +54,7 @@ class Ticket
 	/* @ORM\Column(type="integer")
     */
 	private $nb_redirection;
+
 	
 	
 	
@@ -127,5 +128,49 @@ class Ticket
   {
 	  $this->urgence=$pUrgence;
   }
+  
+   /**
+  * @ORM\Column(type="string", length=1)
+  */
+ private $batiment;
+  
+   public function getBatiment()
+   {
+       return $this->batiment;
+   }
+      public function setBatiment(string $batiment)
+   {
+       $this->batiment = $batiment;
+       return $this;
+   }
+   
+   /**
+    * @ORM\Column(type="string", length=3)
+    */
+   private $salle;
+   public function getSalle()
+   {
+       return $this->salle;
+   }
+   public function setSalle(string $salle)
+   {
+       $this->salle = $salle;
+       return $this;
+   }
+   
+      /**
+    * @ORM\Column(type="string", length=2)
+    */
+   private $poste;
+   
+   public function getPoste()
+   {
+       return $this->poste;
+   }
+   public function setPoste(string $poste)
+   {
+       $this->poste = $poste;
+       return $this;
+   }
   
 }
