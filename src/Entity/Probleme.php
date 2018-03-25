@@ -14,11 +14,7 @@ class Probleme
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
+	 
     private $id_prob;
 
     /**
@@ -31,24 +27,24 @@ class Probleme
         return $this->id;
     }
 
-    public function getIdProb(): ?int
+    public function getIdProb()
     {
         return $this->id_prob;
     }
 
-    public function setIdProb(int $id_prob): self
+    public function setIdProb(int $id_prob)
     {
         $this->id_prob = $id_prob;
 
         return $this;
     }
 
-    public function getLibelleProb(): ?string
+    public function getLibelleProb()
     {
         return $this->libelle_prob;
     }
 
-    public function setLibelleProb(?string $libelle_prob): self
+    public function setLibelleProb(string $libelle_prob)
     {
         $this->libelle_prob = $libelle_prob;
 

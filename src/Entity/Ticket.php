@@ -13,7 +13,7 @@ class Ticket
 {
 
     /**
-     * @ORM\ManyToOne(targetEntity="Urgence", inversedBy="tickets")
+     * @ORM\OneToOne(targetEntity="Urgence", inversedBy="tickets")
 	 * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
      */
 	 private $urgence;

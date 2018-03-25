@@ -45,15 +45,19 @@ class TicketsController extends Controller
            'attr' => array('size' => '50px')
           ))
 		
-		/*->add("batiment", ChoiceType::class,array(
+		->add("batiment", ChoiceType::class,array(
 		'required'=> true,
-		'label' => 'Batiment :'))
-		->add("salle", ChoiceType::class, array(
+		'label' => 'Batiment : ',
+		'choices'=> array(
+		'A' => 'A',
+		'B' => 'B',
+		'C' => 'D')))
+		->add("salle", TextType::class, array(
 		'required'=> true,
-		'label' => 'Salle :'))*/
-		/*->add("poste", ChoiceType::class, array(
+		'label' => 'Salle : '))
+		->add("poste", TextType::class, array(
 		'required'=> true,
-		'label' => 'Poste :'))*/
+		'label' => 'Poste : '))
 		
 		->add("description", TextareaType::class, array(
 		'required'=> true,
