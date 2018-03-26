@@ -21,11 +21,6 @@ class TypeProbleme
      */
     private $libelle_type;
 
-    public function getId()
-    {
-        return $this->id;
-    }
-
     public function getIdType(): ?int
     {
         return $this->id_type;

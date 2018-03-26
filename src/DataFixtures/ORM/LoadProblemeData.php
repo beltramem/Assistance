@@ -1,7 +1,7 @@
 <?php
 namespace App\DataFixtures\ORM;
 
-use App\Entity\Probleme;
+use App\Entity\probleme;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -11,13 +11,13 @@ class LoadProblemeData extends Fixture
     {
 
 		$probleme = new probleme();
-		$probleme->setLibelleProb('Logiciel');
+		$probleme->setLibelleProb('écran cassé');
 		
 		$probleme2 = new probleme();
-		$probleme2->setLibelleProb('Matériel');
+		$probleme2->setLibelleProb('clavier qui fonctionne mal');
 		
 		$probleme3 = new probleme();
-		$probleme3->setLibelleProb('Vol');
+		$probleme3->setLibelleProb('pas de souris');
 		
 		
 		$manager->persist($probleme);	

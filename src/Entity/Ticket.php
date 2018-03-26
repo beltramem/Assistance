@@ -23,6 +23,12 @@ class Ticket
 	 * @ORM\JoinColumn(name="id_prob", referencedColumnName="id_prob")
      */
 	 private $probleme;
+
+	 /**
+     * @ORM\ManyToOne(targetEntity="TypeProbleme", inversedBy="tickets")
+	 * @ORM\JoinColumn(name="id_type", referencedColumnName="id_type")
+     */
+	 private $typeprobleme;
 	 
 	 
 	
@@ -106,6 +112,10 @@ class Ticket
 	{
 		return $this->probleme;
 	}
+	public function getTypeprobleme()
+	{
+		return $this->typeprobleme;
+	}
 	
 	
   public function setIntitule($pIntitule)
@@ -114,7 +124,7 @@ class Ticket
   }	
   public function setDate_de_creation($pDate_de_creation)
   {
-    $this->date_de_creation= $pDate_de_creation;
+    $this->date_de_creation= date("Y/m/d");
   }
   public function setDescription($pDescription)
   {
@@ -142,7 +152,11 @@ class Ticket
   }
   public function setProbleme($pProbleme)
   {
-	  $this->urgence=$pProbleme	;
+	  $this->probleme=$pProbleme	;
+  }
+  public function setTypeprobleme($pTypeProbleme)
+  {
+	  $this->typeprobleme=$pTypeProbleme	;
   }
   
    /**

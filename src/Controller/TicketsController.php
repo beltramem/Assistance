@@ -18,6 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Ticket;
 use App\Entity\Urgence;
 use App\Entity\Probleme;
+use App\Entity\TypeProbleme;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use DateTime;
@@ -45,6 +46,12 @@ class TicketsController extends Controller
 			'label' => 'Probleme :',
    			'class' => Probleme::class,
 			'choice_label' => 'libelle_prob'
+			))
+			->add("typeprobleme", EntityType::class, array(
+			'required'   => true,
+			'label' => 'Type de Probleme :',
+   			'class' => TypeProbleme::class,
+			'choice_label' => 'libelle_type'
 			))
 		->add("intitule", TextType::class, array(
 			'required'   => true,
