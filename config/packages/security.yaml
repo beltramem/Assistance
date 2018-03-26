@@ -14,7 +14,9 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+                default_target_path: /userConnecte
             provider: our_db_provider
+            
     access_control:
         - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, role: ROLE_USER }
+        - { path: ^/userConnecte, role: ROLE_DEMANDEUR }

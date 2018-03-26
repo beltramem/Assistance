@@ -38,12 +38,22 @@ class Utilisateur implements UserInterface, \Serializable
      */
     private $prenom;
 
-
-    public function getId()
+	/**
+	* @ORM\Column(type="json_array", nullable=true)
+	*/
+	private $roles = array();
+	
+	public function setRoles(array $roles)
+	{
+    $this->roles = $roles;
+    return $this;
+	}
+	
+	public function getId()
     {
         return $this->id;
     }
-
+	
     public function getIdUser(): int
     {
         return $this->id_user;
@@ -112,9 +122,12 @@ class Utilisateur implements UserInterface, \Serializable
     }
 	
 	public function getRoles()
-    {
-        return array('ROLE_USER');
-    }
+	{
+    $roles = $this->roles;
+    $roles[] = 'ROLE_USER';
+
+    return array_unique($roles);
+	}
 	
 	/** @see \Serializable::serialize() */
 	public function serialize()
