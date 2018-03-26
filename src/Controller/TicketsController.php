@@ -96,7 +96,7 @@ class TicketsController extends Controller
 	
 		/**
      * @Route("/userConnecte/consulter/{ticket}", name="ticket.consulter")
-	 * @Template("main/product/consulter.html.twig")
+	 * @Template("main/app/tickets/consulter.html.twig")
      */
 	public function consulter(Ticket $ticket)
 	{

@@ -14,9 +14,10 @@
 		<tr>
 			<td>{{ ticket.intitule }}</td>
 			<td>{{ ticket.date_de_creation|date }}</td>
+			<td>{{ ticket.batiment }}{{ticket.salle}}{{ticket.poste}}</td>
 			<td>{{ ticket.description }}</td>
-			<td>{{ ticket.probleme }}</td>
-			<td>{{ ticket.urgence }}</td>
+			<td>{{ ticket.probleme.getLibelleProb() }}</td>
+			<td>{{ ticket.urgence.getLibelleUrgence() }}</td>
 		</tr>
 	</table>
 {% endblock %}
