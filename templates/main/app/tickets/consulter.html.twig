@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<h2>Votre ticket</h2>
+	<table class="table">
+        <tr>
+            <th>Intitule</th>
+            <th>date</th>
+			<th>poste</th>
+			<th>description</th>
+			<th>probleme</th>
+			<th>urgence</th>
+        </tr>
+		<tr>
+			<td>{{ ticket.intitule }}</td>
+			<td>{{ ticket.date_de_creation|date }}</td>
+			<td>{{ ticket.description }}</td>
+			<td>{{ ticket.probleme }}</td>
+			<td>{{ ticket.urgence }}</td>
+		</tr>
+	</table>
+{% endblock %}

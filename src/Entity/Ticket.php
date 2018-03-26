@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use App\Entity\Urgence;
+use DateTime;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TicketRepository")
@@ -124,7 +125,7 @@ class Ticket
   }	
   public function setDate_de_creation($pDate_de_creation)
   {
-    $this->date_de_creation= date("Y/m/d");
+    $this->date_de_creation= new datetime();
   }
   public function setDescription($pDescription)
   {

@@ -12,9 +12,9 @@
         {% for tick in ticket %}
             <tr>
                 <td>{{ tick.intitule }}</td>
-                <td>{{ tick.date_de_creation}}</td>
-                <td>
-                </td>
+                <td>{{ tick.date_de_creation | date('d/m/Y')}}</td>
+                <td>{{ tick.batiment}}{{ tick.salle}}{{ tick.poste}}</td>
+				<td><a href="{{ url("ticket.consulter", {"ticket":tick.id_ticket}) }}">consulter</a></td>
             </tr>
         {% else %}
             <tr>

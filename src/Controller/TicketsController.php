@@ -93,6 +93,16 @@ class TicketsController extends Controller
 		return ["ticket" => $ticket,"form" => $form->createView(), "result" => $result];
     	
     }
+	
+		/**
+     * @Route("/userConnecte/consulter/{ticket}", name="ticket.consulter")
+	 * @Template("main/product/consulter.html.twig")
+     */
+	public function consulter(Ticket $ticket)
+	{
+		$em = $this->getDoctrine()->getManager();
+		return["ticket" => $ticket];
+	}
 
 
     /**
