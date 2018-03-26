@@ -2,22 +2,10 @@
 {% block body %}
 
 <h2>Votre ticket</h2>
-	<table class="table">
-        <tr>
-            <th>Intitule</th>
-            <th>date</th>
-			<th>poste</th>
-			<th>description</th>
-			<th>probleme</th>
-			<th>urgence</th>
-        </tr>
-		<tr>
-			<td>{{ ticket.intitule }}</td>
-			<td>{{ ticket.date_de_creation|date }}</td>
-			<td>{{ ticket.batiment }}{{ticket.salle}}{{ticket.poste}}</td>
-			<td>{{ ticket.description }}</td>
-			<td>{{ ticket.probleme.getLibelleProb() }}</td>
-			<td>{{ ticket.urgence.getLibelleUrgence() }}</td>
-		</tr>
-	</table>
+			<div><label>Intitulé :  </label>{{ ticket.intitule }}</div>
+			<div><label>Date de création : </label>{{ ticket.date_de_creation|date }}</div>
+			<div><label>Poste : </label>{{ ticket.batiment }}{{ticket.salle}}{{ticket.poste}}</div>
+			<div><label>Description : </label>{{ ticket.description }}</div>
+			<div><label>Probleme : </label>{{ ticket.probleme.getLibelleProb() }}</div>
+			<div><label>Urgence : </label>{{ ticket.urgence.getLibelleUrgence() }}</div>
 {% endblock %}
